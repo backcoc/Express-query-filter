@@ -19,7 +19,7 @@ connectDB();
 
 // Route files
 const products = require("./routes/products");
-
+const brands = require("./routes/brand")
 const app = express();
 
 // Body parser
@@ -65,6 +65,7 @@ if (process.env.NODE_ENV === "production") {
 
 // Mount routers
 app.use("/api/v1/products", products);
+app.use("/api/v1/products",brands);
 
 app.use(errorHandler);
 
